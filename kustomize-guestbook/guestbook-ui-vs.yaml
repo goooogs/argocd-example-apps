@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: guestbook-ui-vs
+  name: guestbook-ui
   namespace: prod
 spec:
   gateways:
