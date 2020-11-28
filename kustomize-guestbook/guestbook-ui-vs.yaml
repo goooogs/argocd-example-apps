@@ -2,15 +2,15 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: guestbook-ui
-  namespace: prod
+  namespace: dev
 spec:
   gateways:
-  - istio-system/allforsport-cn-prod
+  - istio-system/allforsport-cn
   hosts:
-  - xxx-guestbook-ui.allforsport.cn
+  - guestbook-ui-dev.allforsport.cn
   http:
   - route:
     - destination:
-        host: guestbook-ui.prod.svc.cluster.local
+        host: guestbook-ui.dev.svc.cluster.local
         port:
           number: 80
