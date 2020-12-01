@@ -16,4 +16,4 @@ spec:
       - image: registry-vpc.cn-shanghai.aliyuncs.com/dktplatform-third-party/stefanprodan_podinfo:3.1.0
         name: guestbook-ui
         ports:
-        - containerPort: 80
+        - containerPort: 9898
