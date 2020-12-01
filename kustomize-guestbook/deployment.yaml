@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dktplatform-booking-website
+  name: guestbook-ui
 spec:
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      app: dktplatform-booking-website
+      app: guestbook-ui
   template:
     metadata:
       labels:
-        app: dktplatform-booking-website
+        app: guestbook-ui
     spec:
       containers:
-      - image: registry-vpc.cn-shanghai.aliyuncs.com/dktplatform-app/booking-website:v0.0.1
-        name: booking-website
+      - image: registry-vpc.cn-shanghai.aliyuncs.com/dktplatform-third-party/stefanprodan_podinfo:3.1.0
+        name: guestbook-ui
         ports:
-        - containerPort: 80
+        - containerPort: 9898
